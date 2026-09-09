@@ -14,7 +14,11 @@ type Bindings = {
 const app = new Hono<{ Bindings: Bindings }>();
 
 // Apply CORS middleware globally to accept cross-origin requests
-app.use('/api/*', cors());
+app.use('/api/*', cors({
+  origin: '*',
+  allowMethods: ['GET', 'POST', 'OPTIONS'],
+  allowHeaders: ['Content-Type', 'Accept'],
+}));
 
 // Define regex for basic email validation
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
