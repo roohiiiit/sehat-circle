@@ -7,9 +7,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <a href="/" className="flex items-center gap-2 group" aria-label="Sehat Circle home">
-          <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-teal-700 text-white text-sm font-bold shadow-sm group-hover:bg-teal-800 transition-colors">
-            S
-          </div>
+          <img src="/logo.svg" alt="Sehat Circle Logo" className="w-8 h-8 rounded-lg shadow-sm group-hover:scale-105 transition-transform" />
           <span className="text-slate-900 font-semibold text-base tracking-tight">
             Sehat <span className="text-teal-600">Circle</span>
           </span>
